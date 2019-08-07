@@ -1,5 +1,6 @@
 package com.link.linkpreview
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.squareup.picasso.Picasso
@@ -57,5 +58,13 @@ class MainActivity : AppCompatActivity() {
 
         richPreview.getPreview("https://www.youtube.com/watch?v=ZSHOYIe3O08&t=11s")
 
+
+        naviageToRecyclerViewExample()
+    }
+
+    private fun naviageToRecyclerViewExample() {
+        btnUseInRecyclerView.setOnClickListener {
+            startActivity(Intent(MainActivity@ this, RecyclerViewExampleActivity::class.java))
+        }
     }
 }
